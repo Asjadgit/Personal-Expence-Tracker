@@ -3,8 +3,16 @@
         "transaction_id": 1,
         "transaction_type": "income",
         "transaction_amount": 50000,
-        "transaction_category": "Bank",
-        "transaction_description": "Added this month income",
-        "transaction_date": "2026-08-11"
+        "transaction_category": "Monthly Income",
+        "transaction_description": "This month Income",
+        "transaction_date": "2026-08-01"
+    },
+    {
+        "transaction_id": 2,
+        "transaction_type": "expense",
+        "transaction_amount": 600,
+        "transaction_category": "Food",
+        "transaction_description": "Expenses on food",
+        "transaction_date": "2026-08-09"
     }
 ]

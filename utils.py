@@ -23,7 +23,7 @@ def get_non_empty_input(prompt):
     """Keep asking for input untill condition satisfied"""
 
     while True:
-        value = input(prompt)
+        value = input(prompt).strip()
         if value:
             return value
         print("Input cannot be empty. Please Try again")

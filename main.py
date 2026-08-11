@@ -29,12 +29,12 @@ while True:
         finance_manager.add_expense()
     elif choice == "3":
         finance_manager.view_transactions()
-    # elif choice == "4":
-    #     employee_manager.update_employee_details()
+    elif choice == "4":
+        finance_manager.search_transactions()
     # elif choice == "5":
     #         employee_manager.delete_employee()
-    # elif choice == "6":
-    #     employee_manager.statistics()
+    elif choice == "6":
+        finance_manager.delete_transaction()
     elif choice == "7":
         print("Goodbye!")
         break
