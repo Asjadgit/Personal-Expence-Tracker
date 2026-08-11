@@ -1,0 +1,10 @@
+[
+    {
+        "transaction_id": 1,
+        "transaction_type": "income",
+        "transaction_amount": 50000,
+        "transaction_category": "Bank",
+        "transaction_description": "Added this month income",
+        "transaction_date": "2026-08-11"
+    }
+]

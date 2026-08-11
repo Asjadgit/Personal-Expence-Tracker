@@ -7,6 +7,27 @@ class Finance:
         self.transaction_description = transaction_description
         self.transaction_date        = transaction_date
 
+    def to_dict(self):
+        return {
+            "transaction_id"            : self.transaction_id,
+            "transaction_type"          : self.transaction_type,
+            "transaction_amount"        : self.transactionamount,
+            "transaction_category"      : self.transaction_category,
+            "transaction_description"   : self.transaction_description,
+            "transaction_date"          : self.transaction_date
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            data["transaction_id"],
+            data["transaction_type"],
+            data["transaction_amount"],
+            data["transaction_category"],
+            data["transaction_description"],
+            data["transaction_date"]
+        )
+    
     @property
     def transactionamount(self):
         return self.__transaction_amount
