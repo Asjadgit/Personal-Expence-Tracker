@@ -31,8 +31,8 @@ while True:
         finance_manager.view_transactions()
     elif choice == "4":
         finance_manager.search_transactions()
-    # elif choice == "5":
-    #         employee_manager.delete_employee()
+    elif choice == "5":
+        finance_manager.update_transaction()
     elif choice == "6":
         finance_manager.delete_transaction()
     elif choice == "7":

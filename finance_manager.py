@@ -70,6 +70,56 @@ def search_transactions():
     if not found:
         print("No Transaction Found!")
 
+def update_transaction():
+    print("\nEnter Transaction Id to update: ")
+    found = False
+    
+    transaction_id = get_valid_int("Enter Here: ")
+    for trans in transactions:
+        if transaction_id == trans.transaction_id:
+            found = True
+            print("Transaction Found! Displayed Below")
+            trans.display_transaction()
+
+            print("What would you like to update: \n")
+            print("1. Amount")
+            print("2. Category")
+            print("3. Description")
+            print("4. Date")
+
+            choice = get_non_empty_input("Choice: ")
+            
+            if choice == "1":
+                while True:
+                    try:
+                        new_transaction_amount   = int(input("Enter transaction amount: "))
+                        trans.transactionamount  = new_transaction_amount
+                        break
+                    except ValueError as error:
+                        print("Invalid Input: Must be numeric")
+                    # transactions.append(trans) 
+                print(f"Transaction with id {trans.transaction_id} updated successfully.")
+            elif choice == "2":
+                new_transaction_category      = get_non_empty_input("Enter transaction category: ")
+                trans.transaction_category    = new_transaction_category
+                print(f"Transaction with id {trans.transaction_id} updated successfully.")
+            elif choice == "3":
+                new_transaction_description   = get_non_empty_input("Enter transaction description: ")
+                trans.transaction_description = new_transaction_description
+                print(f"Transaction with id {trans.transaction_id} updated successfully.")
+            elif choice == "4":
+                new_transaction_date          = get_valid_date("Enter transaction date: ")
+                trans.transaction_date        = new_transaction_date
+                print(f"Transaction with id {trans.transaction_id} updated successfully.")
+            else:
+                print("Invalid choice.\n")
+
+            trans.display_transaction()
+            save_transactions(transactions)
+
+    if not found:
+        print("No Transaction Found!")
+
 
 def delete_transaction():
     print("\nEnter Transaction Id to delete:\n")
