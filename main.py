@@ -16,7 +16,9 @@ def show_menu():
 
     print("6. Delete Transaction")
 
-    print("7. Exit")
+    print("7. Financial Summary")
+
+    print("8. Exit")
 
 
 while True:
@@ -36,5 +38,7 @@ while True:
     elif choice == "6":
         finance_manager.delete_transaction()
     elif choice == "7":
+        finance_manager.financial_summary()
+    elif choice == "8":
         print("Goodbye!")
         break

@@ -14,5 +14,13 @@
         "transaction_category": "Food",
         "transaction_description": "Expenses on food",
         "transaction_date": "2026-08-09"
+    },
+    {
+        "transaction_id": 4,
+        "transaction_type": "income",
+        "transaction_amount": 40000,
+        "transaction_category": "Next Month Income",
+        "transaction_description": "asd",
+        "transaction_date": "2026-08-12"
     }
 ]

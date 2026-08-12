@@ -142,3 +142,31 @@ def delete_transaction():
 
     if not found:
         print("No Transaction Found!")
+
+
+def financial_summary():
+    print("========== Financial Summary ==========")
+    total_transactions = len(transactions)
+
+    incomes = 0
+    expenses = 0
+    expense_amounts = []
+    for transaction in transactions:
+        if transaction.transaction_type == "income":
+            incomes += transaction.transactionamount
+        elif transaction.transaction_type == "expense":
+                    expenses += transaction.transactionamount
+                    expense_amounts.append(transaction.transactionamount)
+
+    balance = incomes - expenses
+    highest_expense = max(expense_amounts)
+    lowest_expense  = min(expense_amounts)
+
+    print(f"Total Transactions  : {total_transactions}")
+    print(f"Total Income        : {incomes}")
+    print(f"Total Expense       : {expenses}")
+    print(f"Balance             : {balance}")
+    print(f"Highest Expense     : {highest_expense}")
+    print(f"Lowest Expense      : {lowest_expense}")
+
+
