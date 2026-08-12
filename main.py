@@ -18,7 +18,9 @@ def show_menu():
 
     print("7. Financial Summary")
 
-    print("8. Exit")
+    print("8. Category Summary")
+
+    print("9. Exit")
 
 
 while True:
@@ -40,5 +42,7 @@ while True:
     elif choice == "7":
         finance_manager.financial_summary()
     elif choice == "8":
+        finance_manager.category_summary()
+    elif choice == "9":
         print("Goodbye!")
         break

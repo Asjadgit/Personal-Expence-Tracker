@@ -159,8 +159,9 @@ def financial_summary():
                     expense_amounts.append(transaction.transactionamount)
 
     balance = incomes - expenses
-    highest_expense = max(expense_amounts)
-    lowest_expense  = min(expense_amounts)
+    highest_expense = max(expense_amounts) if expense_amounts else 0
+    lowest_expense  = min(expense_amounts) if expense_amounts else 0
+    saving_rate     = (balance / incomes) * 100 if incomes > 0 else 0 
 
     print(f"Total Transactions  : {total_transactions}")
     print(f"Total Income        : {incomes}")
@@ -168,5 +169,25 @@ def financial_summary():
     print(f"Balance             : {balance}")
     print(f"Highest Expense     : {highest_expense}")
     print(f"Lowest Expense      : {lowest_expense}")
+    print(f"Savings Rate        : {saving_rate:.2f}%")
+
+def category_summary():
+    print("========== Category Summary ==========")
+    total_transactions = len(transactions)
+
+    category_totals = {}
+    for transaction in transactions:
+        if transaction.transaction_type == "expense":
+            category = transaction.transaction_category
+            amount   = transaction.transactionamount
+
+            if category in category_totals:
+                category_totals[category] += amount
+            else:
+                category_totals[category]  = amount
+
+    for category, total in category_totals.items():
+        print(f"{category} : {total}")
+
 
 

@@ -22,5 +22,21 @@
         "transaction_category": "Next Month Income",
         "transaction_description": "asd",
         "transaction_date": "2026-08-12"
+    },
+    {
+        "transaction_id": 5,
+        "transaction_type": "expense",
+        "transaction_amount": 900,
+        "transaction_category": "Food",
+        "transaction_description": "Burger",
+        "transaction_date": "2026-08-10"
+    },
+    {
+        "transaction_id": 6,
+        "transaction_type": "expense",
+        "transaction_amount": 1000,
+        "transaction_category": "Fishing",
+        "transaction_description": "asd",
+        "transaction_date": "2026-07-10"
     }
 ]
